@@ -2,18 +2,25 @@ Package: FPCdpca
 Type: Package
 Title: The FPCdpca Criterion on Distributed Principal Component
         Analysis
-Version: 0.1.0
-Authors@R: c(person("Guangbao Guo",role = c("aut", "cre","cph"),email = "ggb11111111@163.com"),person("Jiarui Li",role = "ctb",email = "jiarui0191@163.com"))
+Date: 2025-03-30
+Version: 0.2.0
+Authors@R: c(person("Guangbao", "Guo", role = c("aut", "cre"),
+                     email = "ggb11111111@163.com",
+                     comment = c(ORCID = "0000-0002-4115-6218")),
+                     person("Jiarui", "Li", role = "aut"))
 Maintainer: Guangbao Guo <ggb11111111@163.com>
-Description: We consider optimal subset selection in the setting that one needs to use only one data subset to represent the whole data set with minimum information loss, and devise a novel intersection-based criterion on selecting optimal subset, called as the FPC criterion, to handle with the optimal sub-estimator in distributed principal component analysis; That is, the FPCdpca. The philosophy of the package is described in Guo G. (2020) <doi:10.1007/s00180-020-00974-4>.
+Description: We consider optimal subset selection in the setting that one needs to use only one data subset to represent the whole data set with minimum information loss, and devise a novel intersection-based criterion on selecting optimal subset, called as the FPC criterion, to handle with the optimal sub-estimator in distributed principal component analysis; That is, the FPCdpca. The philosophy of the package is described in Guo G. (2025) <doi:10.1016/j.physa.2024.130308>.
 License: Apache License (== 2.0)
 Encoding: UTF-8
-Imports: matrixcalc,Rdimtools,rsvd,stats
+RoxygenNote: 7.3.2
+Imports: matrixcalc,rsvd,stats
+LazyData: true
 Suggests: testthat (>= 3.0.0)
 NeedsCompilation: no
-Packaged: 2024-05-26 11:11:27 UTC; LJR
+Packaged: 2025-04-10 02:55:26 UTC; Administrator
 Config/testthat/edition: 3
-Author: Guangbao Guo [aut, cre, cph],
-  Jiarui Li [ctb]
+Author: Guangbao Guo [aut, cre] (<https://orcid.org/0000-0002-4115-6218>),
+  Jiarui Li [aut]
+Depends: R (>= 3.5.0)
 Repository: CRAN
-Date/Publication: 2024-05-27 17:30:05 UTC
+Date/Publication: 2025-04-10 03:20:02 UTC

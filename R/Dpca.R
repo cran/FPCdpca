@@ -1,18 +1,36 @@
-#'  The distributed PCA
+#' Distributed Principal Component Analysis (DPCA)
 #'
-#' data is the n random vectors constitute the data matrix.
-#'  K is an index subset/sub-vector specifying.
-#'        nk is the size of subsets.
-#'        n is the sample size.
-#'        p the number of variables.
+#' Performs distributed PCA on a data matrix partitioned into subsets.
 #'
-#' @return MSEXp, MSEvp, MSESp, kopt
-#' @export
+#' @param data A numeric matrix or data frame containing the data, where rows are observations and columns are variables.
+#' @param K Integer, the number of subsets to partition the data into.
+#' @param nk Integer, the size of each subset (number of rows per subset).
+#'
+#' @return A list containing:
+#' \itemize{
+#'   \item \code{MSEXp}: Minimum squared reconstruction error.
+#'   \item \code{MSEvp}: MSE of eigenvectors.
+#'   \item \code{MSESp}: MSE of covariance matrix.
+#'   \item \code{kopt}: Optimal subset index.
+#' }
+#'
+#' @details
+#' The function splits the input data matrix into \code{K} subsets of size \code{nk} each. 
+#' The parameters \code{n} (number of rows) and \code{p} (number of columns) are automatically 
+#' derived from the input data matrix as \code{n = nrow(data)} and \code{p = ncol(data)}.
 #'
 #' @examples
-#' K=20; nk=50; nr=10; p=8;  n=K*nk;d=6
-#' data=matrix(c(rnorm((n-nr)*p,0,1),rpois(nr*p,100)),ncol=p)
-#' Dpca(data=data,K=K, nk=nk)
+#' K <- 20
+#' nk <- 50
+#' nr <- 10
+#' p <- 8
+#' n <- K * nk
+#' d <- 6
+#' data <- matrix(c(rnorm((n - nr) * p, 0, 1), rpois(nr * p, 100)), ncol = p)
+#' Dpca(data = data, K = K, nk = nk)
+#' @importFrom stats cov
+#'
+#' @export
 
 Dpca=function(data,K, nk){
   n=nrow(data);p=ncol(data)

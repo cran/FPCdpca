@@ -1,14 +1,16 @@
+#' FPC
 #' @param data is a data set
 #' @param K is an index subset/sub-vectoris
 #' @param nk is an index subset/sub-vectoris for each block
+#' @usage FPC(data,K,nk)
 #' @return MSEv1,MSEv2,MSEvopt,MSESopt1,MSESopt2,MSESopt,MSEShat,MSESba,MSESw
 #' @export
 #' @examples
-#' install.packages("matrixcalc")
 #' library(matrixcalc)
 #' K=20; nk=500; p=8; n=10000;m=50
 #' data=matrix(c(rnorm((n-m)*p,0,1),rpois(m*p,100)),ncol=p)
 #' FPC(data=data,K=K,nk=nk)
+#' @importFrom stats var
 FPC=function(data,K,nk){
   n=nrow(data);p=ncol(data)
   X0=data

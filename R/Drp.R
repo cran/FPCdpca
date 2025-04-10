@@ -1,10 +1,11 @@
 #'  Distributed random projection
 #' @param data is  sparse random projection matrix
 #' @param K is  the number of distributed nodes.
-#'        nk is the size of subsets.
-#'        d is the dimension number.
+#' @param nk is the size of subsets.
+#' @param d is the dimension number.
 #'        n is the sample size.
 #'        p the number of variables.
+#' @usage Drp(data,K, nk,d)
 #' @return MSEXrp, MSEvrp, MSESrp, kopt
 #' @export
 #' @examples
@@ -12,6 +13,7 @@
 #' data=matrix(c(rnorm((n-nr)*p,0,1),rpois(nr*p,100)),ncol=p)
 #' data=matrix(rpois((n-nr)*p,1),ncol=p); rexp(nr*p,1); rchisq(10000, df = 5);
 #' Drp(data=data,K=K, nk=nk,d=d)
+#' @importFrom stats cov
 Drp=function(data,K, nk,d){
   n=nrow(data);p=ncol(data)
   th=MSEv=MSES=c(rep(1,K))

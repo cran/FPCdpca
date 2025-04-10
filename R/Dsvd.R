@@ -1,15 +1,17 @@
+#' Distributed svd
 #' @param data a real input matrix (or data frame) to be decomposed.
 #' @param K the number of blocks into which variable X is divided.
 #' @param nk The number of each blocks.
 #' @param k  the desired target rank.
+#' @usage Dsvd(data,K, nk,k)
 #' @return MSE of Xs,vsvd,Ssvd and kopt.
 #' @export
 #' @examples
-#'install.packages("matrixcalc")
-#'library(matrixcalc)
+#' library(matrixcalc)
 #' K=20; nk=50; nr=10; p=8; k=4; n=K*nk;
 #' data=matrix(c(rnorm((n-nr)*p,0,1),rpois(nr*p,100)),ncol=p)
 #' Dsvd(data=data,K=K, nk=nk,k=k)
+#' @importFrom stats cov
 Dsvd=function(data,K, nk,k){
   n=nrow(data);p=ncol(data)
   X0=data

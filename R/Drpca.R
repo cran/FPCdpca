@@ -2,15 +2,17 @@
 #'
 #' @param data is  sparse random projection matrix
 #' @param K is  the number of distributed nodes.
-#'        nk is the size of subsets.
-#'        d is the dimension number.
+#' @param nk is the size of subsets.
+#' @param d is the dimension number.
 #'        n is the sample size.
 #'        p the number of variables.
+#' @usage Drpca(data,K, nk,d)
 #' @return MSEXrp, MSEvrp, kSopt, kxopt
 #' @export
 #' @examples
 #' K=20; nk=50; nr=50; p=8;d=5; n=K*nk;
 #' data=matrix(c(rnorm((n-nr)*p,0,1),rpois(nr*p,100)),ncol=p)
+#' @importFrom stats cov
 Drpca=function(data,K, nk,d){
   n=nrow(data);p=ncol(data)
   th=fv=c(rep(1,K))
