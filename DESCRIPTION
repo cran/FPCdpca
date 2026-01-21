@@ -2,8 +2,8 @@ Package: FPCdpca
 Type: Package
 Title: The FPCdpca Criterion on Distributed Principal Component
         Analysis
-Date: 2025-05-08
-Version: 0.3.0
+Date: 2026-01-21
+Version: 0.4.0
 Authors@R: c(person("Guangbao", "Guo", role = c("aut", "cre"),
                      email = "ggb11111111@163.com",
                      comment = c(ORCID = "0000-0002-4115-6218")),
@@ -17,11 +17,11 @@ Imports: matrixcalc,rsvd,stats
 LazyData: true
 Suggests: testthat (>= 3.0.0)
 NeedsCompilation: no
-Packaged: 2025-05-08 13:29:55 UTC; R7000
+Packaged: 2026-01-21 02:20:43 UTC; Administrator
 Config/testthat/edition: 3
 Author: Guangbao Guo [aut, cre] (ORCID:
     <https://orcid.org/0000-0002-4115-6218>),
   Jiarui Li [aut]
 Depends: R (>= 3.5.0)
 Repository: CRAN
-Date/Publication: 2025-05-09 02:50:06 UTC
+Date/Publication: 2026-01-21 03:40:09 UTC

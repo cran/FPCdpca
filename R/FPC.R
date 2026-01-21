@@ -38,7 +38,7 @@ FPC=function(data,K,nk){
     eigenVector1=eigenM1$vectors
     orderValue1=order(eigenValue1,decreasing=T)
     v0=eigenVector1[,orderValue1]
-    M2=(t(scale(X))%*%scale(X))/nk
+    M2=(t(scale(X))%*%scale(X))/(nk-1)
     eigenM2=eigen(M2)
     eigenValue2=eigenM2$values
     eigenVector2=eigenM2$vectors

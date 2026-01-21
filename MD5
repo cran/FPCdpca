@@ -1,4 +1,4 @@
-dc60ca470d6811a801dc4d7ad4385cd3 *DESCRIPTION
+9e90c93f3d1c3990778afa234569ec20 *DESCRIPTION
 dea4d9a39ae799a2c8cad8afc2245c2d *NAMESPACE
 d43bb495cb68808eb5391ce07031cc3f *R/Depca.R
 11a2facc1767755ff96c2252743e7674 *R/Dpca.R
@@ -6,7 +6,7 @@ d43bb495cb68808eb5391ce07031cc3f *R/Depca.R
 8f87a0f48a3f6167429c701ecccf942f *R/Drpca.R
 9c14db7099dac5d392b5a23a9b2e1a4b *R/Drsvd.R
 5d5ca988d2881536ead83adf57856ba8 *R/Dsvd.R
-4602261c75b87d1d9a9c457ffc6c6eb4 *R/FPC.R
+f2f2aebe4a567477457edefd1f0c3653 *R/FPC.R
 25c20be9b593254b7fe853dfa164c388 *data/review.rda
 42bdf5acdea55d85a1c399b65b1ab8a7 *data/riboflavin.rda
 ae310eaa043581d7c468db551c935566 *data/riboflavinv100.rda
